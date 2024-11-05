@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://www.appnovation.com/sites/default/files/2019-06/techservicelogo_HTML5.svg" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Input Types Showcase</title>
+    <style>
+        /* Basic Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Body Styling */
+        body {
+            background-color: #f4f7fa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        /* Container Styling */
+        .form-section {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 25px;
+            width: 100%;
+            max-width: 800px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .form-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Form Heading */
+        .form-section h3 {
+            margin-bottom: 15px;
+            color: #0073e6;
+            font-size: 1.4em;
+        }
+
+        /* Input Container Styling */
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        /* Labels */
+        label {
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: bold;
+            font-size: 1em;
+        }
+
+        /* Inputs */
+        input, select, textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            width: 100%;
+            transition: border-color 0.3s;
+        }
+        input:focus, select:focus, textarea:focus {
+            border-color: #0073e6;
+            outline: none;
+        }
+
+        /* Button Styling */
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+        .button-group input[type="button"],
+        .button-group input[type="submit"],
+        .button-group input[type="reset"] {
+            background-color: #0073e6;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .button-group input[type="button"]:hover,
+        .button-group input[type="submit"]:hover,
+        .button-group input[type="reset"]:hover {
+            background-color: #005bb5;
+            transform: translateY(-2px);
+        }
+        .button-group input[type="button"]:active,
+        .button-group input[type="submit"]:active,
+        .button-group input[type="reset"]:active {
+            transform: translateY(1px);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .form-section {
+                padding: 20px;
+                margin: 15px;
+            }
+            .button-group {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Form Section 1: Basic Text Inputs -->
+    <div class="form-section">
+        <h3>Basic Text Inputs</h3>
+        <div class="input-container">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" placeholder="Enter your first name">
+        </div>
+        <div class="input-container">
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" placeholder="Enter your last name">
+        </div>
+        <div class="input-container">
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter your password">
+        </div>
+        <div class="input-container">
+            <label for="hidden">Hidden Field (Not visible)</label>
+            <input type="hidden" id="hidden" value="Hidden Value">
+        </div>
+    </div>
+
+    <!-- Form Section 2: Buttons -->
+    <div class="form-section">
+        <h3>Buttons</h3>
+        <div class="button-group">
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+            <input type="button" value="Click Me">
+            <input type="image" src="https://via.placeholder.com/50" alt="Image Button">
+        </div>
+    </div>
+
+    <!-- Form Section 3: File, Search, and Number -->
+    <div class="form-section">
+        <h3>File, Search, and Number Inputs</h3>
+        <div class="input-container">
+            <label for="file">File Input:</label>
+            <input type="file" id="file">
+        </div>
+        <div class="input-container">
+            <label for="search">Search Input:</label>
+            <input type="search" id="search" placeholder="Search here...">
+        </div>
+        <div class="input-container">
+            <label for="number">Number Input (20-50):</label>
+            <input type="number" id="number" min="20" max="50" placeholder="Enter a number">
+        </div>
+    </div>
+
+    
+    <!-- Form Section 4: Date and Time Inputs -->
+    <div class="form-section">
+        <h3>Date and Time Inputs</h3>
+        <div class="input-container">
+            <label for="date">Date Input:</label>
+            <input type="date" id="date">
+        </div>
+        <div class="input-container">
+            <label for="time">Time Input:</label>
+            <input type="time" id="time">
+        </div>
+        <div class="input-container">
+            <label for="datetime">Datetime-Local Input:</label>
+            <input type="datetime-local" id="datetime">
+        </div>
+        <div class="input-container">
+            <label for="month">Month Input:</label>
+            <input type="month" id="month">
+        </div>
+        <div class="input-container">
+            <label for="week">Week Input:</label>
+            <input type="week" id="week">
+        </div>
+    </div>
+ 
+    <!-- Form Section 5: Color and Range Inputs -->
+    <div class="form-section">
+        <h3>Color and Range Inputs</h3>
+        <div class="input-container">
+            <label for="color">Color Picker:</label>
+            <input type="color" id="color">
+        </div>
+        <div class="input-container">
+            <label for="range">Range Input (0-100):</label>
+            <input type="range" id="range" min="0" max="100">
+        </div>
+    </div>
+ 
+    <!-- Form Section 6: Checkbox and Radio Inputs -->
+    <div class="form-section">
+        <h3>Checkboxes and Radio Buttons</h3>
+        <div class="input-container">
+            <p>Select your favorite languages:</p>
+            <label><input type="checkbox" name="lang" value="cpp"> C++</label>
+            <label><input type="checkbox" name="lang" value="java"> Java</label>
+            <label><input type="checkbox" name="lang" value="html"> HTML</label>
+            <label><input type="checkbox" name="lang" value="python"> Python</label>
+        </div>
+        <div class="input-container">
+            <p>Select your preferred language:</p>
+            <label><input type="radio" name="preferred-lang" value="cpp"> C++</label>
+            <label><input type="radio" name="preferred-lang" value="java"> Java</label>
+            <label><input type="radio" name="preferred-lang" value="html"> HTML</label>
+            <label><input type="radio" name="preferred-lang" value="python"> Python</label>
+        </div>
+    </div>
+ 
+    <!-- Form Section 7: Contact Information -->
+    <div class="form-section">
+        <h3>Contact Information</h3>
+        <div class="input-container">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email">
+        </div>
+        <div class="input-container">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number">
+        </div>
+        <div class="input-container">
+            <label for="url">Website URL:</label>
+            <input type="url" id="url" placeholder="Enter your website URL">
+        </div>
+    </div>
+ 
+    <!-- Form Section 8: Textarea, Select, and Datalist -->
+    <div class="form-section">
+        <h3>Other Input Types</h3>
+        <div class="input-container">
+            <label for="comments">Textarea:</label>
+            <textarea id="comments" rows="4" placeholder="Write your comments here..."></textarea>
+        </div>
+        <div class="input-container">
+            <label for="options">Select (Dropdown):</label>
+            <select id="options">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+            </select>
+        </div>
+        <div class="input-container">
+            <label for="datalist">Datalist (Suggestions):</label>
+            <input list="suggestions" id="datalist" placeholder="Choose or type...">
+            <datalist id="suggestions">
+                <option value="Suggestion 1">
+                <option value="Suggestion 2">
+                <option value="Suggestion 3">
+                <option value="Suggestion 4">
+            </datalist>
+        </div>
+    </div>
+ 
+
+</body>
+</html>
